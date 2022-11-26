@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listHotel">
+
+
+    <fragment
+        android:id="@+id/addHotel"
+        android:name="com.example.travelapp.view.AddHotel"
+        android:label="fragment_add_hotel"
+        tools:layout="@layout/fragment_add_hotel" >
+        <action
+            android:id="@+id/action_addHotel_to_listHotel"
+            app:destination="@id/listHotel" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailHotel"
+        android:name="com.example.travelapp.view.DetailHotel"
+        android:label="fragment_detail_hotel"
+        tools:layout="@layout/fragment_detail_hotel" >
+        <action
+            android:id="@+id/action_detailHotel_to_listHotel"
+            app:destination="@id/listHotel" />
+    </fragment>
+    <fragment
+        android:id="@+id/listHotel"
+        android:name="com.example.travelapp.view.ListHotel"
+        android:label="ListHotel" >
+        <action
+            android:id="@+id/action_listHotel_to_addHotel"
+            app:destination="@id/addHotel" />
+        <action
+            android:id="@+id/action_listHotel_to_detailHotel"
+            app:destination="@id/detailHotel" />
+        <action
+            android:id="@+id/action_listHotel_to_updateHotel"
+            app:destination="@id/updateHotel" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateHotel"
+        android:name="com.example.travelapp.view.UpdateHotel"
+        android:label="fragment_update_hotel"
+        tools:layout="@layout/fragment_update_hotel" >
+        <action
+            android:id="@+id/action_updateHotel_to_listHotel"
+            app:destination="@id/listHotel" />
+    </fragment>
+</navigation>
